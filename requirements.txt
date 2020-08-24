@@ -25,4 +25,42 @@ git-scm.com/book/ru/v2/введение-установка-Git
 	-Сперва нужно убедиться, что гит установлен git --version
 	-создаём репозиторий на гитхабе
 	-в gitignore добавляем файлы, которые не хотим складывать в гит
-	-git checkout -b "webpack"
+	создаём отдельную ветку для вебпака
+		-git checkout -b "webpack"
+		git add . (добавляем все файлы в эту ветку)
+		git commit -m "create webpack config"
+		git push -u origin webpack
+
+Базовая настройка Webpack
+	устанавливаем node, npm init - инициализируем, переходим на сатй webpack и устанавливаем
+	 const path = require('path') 
+
+	module.exports = {
+	context: path.resolve(__dirname, 'src'), контекст для всех исходников
+	mode: 'development',
+	entry: './index.js', входной файл, ентри объект(можно оставить как строчка, если файл один)
+	output: { 
+		filename: 'bundle.[hash].js', файлы в который всё собирается
+		path: path.resolve(__dirname, 'dist') папка в которую всё собирается
+	}
+ }
+
+resolve: {
+		extensions: ['.js'],
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+			'@core': path.resolve(__dirname, 'src/core')
+
+добавляем алисы для более удобного переходы
+добавляем скрипты в json для автоматизации
+	"start": "webpack", запускает в режиме разработки
+	 "build": "webpack --mode productiion" минимифицирует
+
+ставим плагины для взаимодействия с проектом
+	npm install --save-dev html-webpack-plugin 
+
+	npm install copy-webpack-plugin --save-dev для того чтоб  фавикон перетаскивать
+
+	npm install --save-dev clean-webpack-plugin для очистки необходимой папки
+
+	npm install --save-dev mini-css-extract-plugin чтобы выносить сисс из жс в отдельный файл
