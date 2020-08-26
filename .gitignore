@@ -1,3 +1,5 @@
 node_modules
 myTimer
 jsConstructor
+dist
+.package.json
