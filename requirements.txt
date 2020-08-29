@@ -30,7 +30,8 @@ git-scm.com/book/ru/v2/введение-установка-Git
 		git add . (добавляем все файлы в эту ветку)
 		git commit -m "create webpack config"
 		git push -u origin webpack
-
+	git checkout
+	git pull
 Базовая настройка Webpack
 	устанавливаем node, npm init - инициализируем, переходим на сатй webpack и устанавливаем
 	 const path = require('path') 
@@ -64,3 +65,16 @@ resolve: {
 	npm install --save-dev clean-webpack-plugin для очистки необходимой папки
 
 	npm install --save-dev mini-css-extract-plugin чтобы выносить сисс из жс в отдельный файл
+
+
+
+
+
+	новая ветка для верстки 
+	
+	npm i normalize.css
+	@import "~normalize.css"
+подключаем material icons
+
+
+верстаем заготовки под страницы
