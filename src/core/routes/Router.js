@@ -1,4 +1,4 @@
-import {$} from '@core/dom'
+import {$} from '../dom'
 import {ActiveRoute} from './ActiveRoute'
 // import { Page } from '../Page'
 // import {ActiveRoute} from './ActiveRoute'
