@@ -4,8 +4,8 @@
   "description": "demo JS Application",
   "main": "webpack.config.js",
   "scripts": {
-	 "test": "jest",
-	 "test:watch": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "lint": "npx eslint ./src"
@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
+    "eslint-plugin-jest": "^24.0.1",
     "normalize.css": "^8.0.1"
   }
 }
